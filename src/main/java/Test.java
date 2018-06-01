@@ -11,7 +11,7 @@ class Test {
 
     public static void main(String[] args) throws Exception {
 
-        File file = new File("E:\\myapp\\src\\main\\resources\\3tiger.json");
+        File file = new File("src\\main\\resources\\3tiger.json");
         String content = FileUtils.readFileToString(file, "utf-8");
 
         // Convert JSON string to JSONObject
