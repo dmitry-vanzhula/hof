@@ -1,9 +1,9 @@
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-class JsHandler {
+public class JsHandler {
 
-    static JSONObject convertJsStringToJsObject(String content) {
+     static JSONObject convertJsStringToJsObject(String content) {
         return new JSONObject(content);
 
     }
@@ -12,10 +12,9 @@ class JsHandler {
         JSONArray winsArray = jsObject.getJSONObject("result").getJSONObject("gameInfo").getJSONArray("wins");
         JSONObject winsObject = (JSONObject) winsArray.get(0);
         return winsObject.getJSONArray("lines");
-
     }
 
-    static String[] convertLinesFromJsArrayToJavaArray(int numberOfLines, JSONArray jsLines) {
+     static String[] convertLinesFromJsArrayToJavaArray(int numberOfLines, JSONArray jsLines) {
         try {
             String[] actualLines = new String[numberOfLines];
             for (int i = 0; i < jsLines.length(); i++) {
@@ -27,4 +26,14 @@ class JsHandler {
         }
         return new String[0];
     }
+
+     static double getTotalWin(JSONObject jsObject) {
+        JSONArray winsArray = jsObject.getJSONObject("result").getJSONObject("gameInfo").getJSONArray("wins");
+        JSONObject winsObject = (JSONObject) winsArray.get(0);
+        double win  = winsObject.getDouble("win");
+        return win;
+    }
+
+
+
 }

@@ -1,6 +1,8 @@
-class Lines {
+package ExpLines;
 
-    static String[] fillWithLines5x3x50StandardV2() {
+public class Lines {
+
+   public static String[] fillWithLines5x3x50StandardV2() {
         String[] lines = new String[50];
         lines[0] = "[[1],[1],[1],[1],[1]]";
         lines[1] = "[[0],[0],[0],[0],[0]]";
@@ -54,7 +56,7 @@ class Lines {
         lines[49] = "[[0],[2],[0],[2],[0]]";
         return lines;
     }
-    static String[] fillWithLinesIndependent5x4x50V2() {
+    public static String[] fillWithLinesIndependent5x4x50V2() {
         String[] lines = new String[50];
         lines[0] = "[[],[1],[],[],[],[1],[],[],[],[1],[],[],[],[1],[],[],[],[1],[],[]]";
         lines[1] = "[[],[],[1],[],[],[],[1],[],[],[],[1],[],[],[],[1],[],[],[],[1],[]]";
@@ -109,7 +111,7 @@ class Lines {
         return lines;
         }
 
-    static String[] fillWithLines5x4x50StandardV2 () {
+    public static String[] fillWithLines5x4x50StandardV2 () {
         String[] lines = new String[50];
 
         lines[0] = "[[1],[1],[1],[1],[1]]";

@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-class CompareObjects {
+public class AssertEquals {
 
      static boolean isEqualsLines(Object[] a, Object[] a2) {
         if (a==a2)
@@ -21,4 +21,14 @@ class CompareObjects {
 
         return true;
     }
+
+     static boolean isEqualsWins(double expWin, double actualWin){
+        if(expWin == actualWin){
+            System.out.println(true);
+        } else {
+            System.out.println( "Expected: " + expWin + " Actual: " + actualWin + " " + false);
+        }
+        return true;
+    }
+
 }
