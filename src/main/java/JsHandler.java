@@ -18,6 +18,16 @@ public class JsHandler {
         return jsonSequencesBG;
     }
 
+    protected static JSONArray getJsArraySequencesFG(JSONObject jsObject) {
+        JSONArray jsonSequencesFG = jsObject.getJSONObject("result").getJSONObject("gameInfo").getJSONArray("symbolsSequences").getJSONArray(1);
+        return jsonSequencesFG;
+    }
+
+    protected static JSONArray getJsArraySequencesRespins(JSONObject jsObject) {
+        JSONArray jsonSequencesRespins = jsObject.getJSONObject("result").getJSONObject("gameInfo").getJSONArray("symbolsSequences").getJSONArray(2);
+        return jsonSequencesRespins;
+    }
+
     protected static String[] convertLinesFromJsArrayToJavaArray(int numberOfLines, JSONArray jsonSequencesBG) {
         try {
             String[] actualSequencesBG = new String[5];
