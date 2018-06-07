@@ -2,19 +2,19 @@ import java.util.Objects;
 
 public class AssertEquals {
 
-     static boolean isEqualsLines(Object[] a, Object[] a2) {
-        if (a==a2)
+    protected static boolean isEqual(Object[] expLines, Object[] actualLines) {
+        if (expLines == actualLines)
             return true;
-        if (a==null || a2==null)
+        if (expLines == null || actualLines == null)
             return false;
 
-        int length = a.length;
-        if (a2.length != length)
+        int length = expLines.length;
+        if (actualLines.length != length)
             return false;
 
-        for (int i=0; i<length; i++) {
-            if (!Objects.equals(a[i], a2[i])){
-                System.out.println(" line id: " + i + "\n" + " expected: " + a[i] + "\n " + "actual:   " + a2[i]);
+        for (int i = 0; i < length; i++) {
+            if (!Objects.equals(expLines[i], actualLines[i])) {
+                System.out.println(" line id: " + i + "\n" + " expected: " + expLines[i] + "\n " + "actual:   " + actualLines[i]);
                 return false;
             }
         }
@@ -22,11 +22,11 @@ public class AssertEquals {
         return true;
     }
 
-     static boolean isEqualsWins(double expWin, double actualWin){
-        if(expWin == actualWin){
+    protected static boolean isEqualWins(double expWin, double actualWin) {
+        if (expWin == actualWin) {
             System.out.println(true);
         } else {
-            System.out.println( "Expected: " + expWin + " Actual: " + actualWin + " " + false);
+            System.out.println("Expected: " + expWin + " Actual: " + actualWin + " " + false);
         }
         return true;
     }
